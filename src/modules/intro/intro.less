@@ -1,0 +1,71 @@
+.intro {
+  height: 468px;
+  position: relative;
+
+  &__title {
+    font: 700 36px/42px @Muller;
+  }
+  &__info {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 466px;
+  }
+  &__inner {
+    position: relative;
+    height: 100%;
+    font-size: 0;
+  }
+  &__inner::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  &__about {
+    font: 400 16px/28px @Muller;
+    margin: 18px 0 30px 0;
+  }
+  &__button {
+    font: 400 16px/42px @Muller;
+    color: @color-white;
+    background-color: @color-black;
+    text-align: center;
+    width: 255px;
+    height: 45px;
+    border-radius: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+  }
+  &__image {
+    position: absolute;
+    right: 270px;
+    bottom: -160px;
+    height: 450px;
+    z-index: -1;
+
+    @media (max-width: @bigDesktop) {
+      right: 70px;
+    }
+    @media (max-width: @bigTablet) {
+      right: 25px;
+      height: 400px;
+      bottom: -111px;
+    }    
+  }
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  top: -65px; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .5;
+  background-image: url("/static/img/back.png");
+  background-repeat: no-repeat;
+  background-position: center 55%;
+  background-size: cover;
+  padding-bottom: 60px;
+}
