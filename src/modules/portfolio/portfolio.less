@@ -6,13 +6,15 @@
     font: 700 36px/32px @Muller;
     margin-bottom: 30px;
   }
-  &__items {
-    padding: 35px 91px 54px 54px;
+  &__item {
+    padding: 31px 91px 48px 54px;
     background-color: @color-white;
     margin-bottom: 20px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;    
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);  
   }
   &__preview {
 
@@ -21,15 +23,68 @@
       background-color: #EFF0F5;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
-      margin: 45px 68px 0 0;
-      padding: 0 99px 0 99px;
+      margin: 56px 68px 0 0;
 
+      &_mob {
+        padding: 5px 118px 0 119px;
+      }
+      &_ipad {
+        padding: 10px 98px 6px 98px;
+      }
+      &_mac {
+        padding: 29px 30px 23px 30px;
+      }
     }
     &-image {
-      max-width: 146px;
+      height: 214px;
+
+      &_ipad {
+        height: 203px;
+      }
+      &_mac {
+        height: 167px;
+      }
     }
   }
   &__info {
     
+    &-title {
+      font: 700 18px/22px @Muller;
+    }
+    &-description {
+      font: 400 16px/22px @Muller;
+      opacity: 0.8;
+      margin: 9px 0 30px 0;
+    }
+  }
+  &__devices {
+
+    &-description {
+      font: 400 16px/22px @Muller;
+      opacity: 0.8;
+      margin: 25px 0 10px 0;
+    }
+    &-nav {
+      font: 400 16px/21px @Muller;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(55, 58, 60, 0.2);
+    }
+    &-link {
+      text-decoration: none;
+      color: @color-black;
+      opacity: 0.5;
+      padding-bottom: 9px;
+    }
+    &-link:hover {
+      font-weight: 700;
+      opacity: 1;
+      border-bottom: 3px solid #444287;
+    }
+    &-item_space {
+      margin: 0 53px 0 53px;
+    }
+    &-screenshot {
+      margin: 5px 11px 0 0;
+    }
   }
 }
