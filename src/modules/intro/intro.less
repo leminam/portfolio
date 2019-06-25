@@ -9,6 +9,10 @@
     vertical-align: middle;
     display: inline-block;
     max-width: 466px;
+
+    @media (max-width: @tabletWidth) {
+      max-width: 290px;
+    }
   }
   &__inner {
     position: relative;
@@ -22,7 +26,7 @@
     height: 100%;
   }
   &__about {
-    font: 400 16px/28px @Muller;
+    font: 400 16px/26px @Muller;
     margin: 18px 0 30px 0;
   }
   &__button {
@@ -39,15 +43,16 @@
   }
   &__image {
     position: absolute;
-    right: 270px;
+    right: 218px;
     bottom: -160px;
     height: 450px;
     z-index: -1;
 
-    @media (max-width: @bigDesktop) {
+    @media (max-width: @lgWidth) {
       right: 70px;
+      bottom: -119px;
     }
-    @media (max-width: @bigTablet) {
+    @media (max-width: @mdWidth) {
       right: 25px;
       height: 400px;
       bottom: -111px;
