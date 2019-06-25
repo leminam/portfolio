@@ -6,6 +6,10 @@
   &__title {
     font: 700 36px/42px @Muller;
     margin-bottom: 25px;
+
+    @media @media-small, @media-mobile {
+      font: 700 30px/32px @Muller;
+    }
   }
   &__contacts {
     font: 400 16px/24px @Muller;
@@ -13,11 +17,11 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    @media (max-width: @mdWidth) {
+    @media @media-middle, @media-tablet {
       flex-flow: row wrap;
     }
-    @media (max-width: @tabletWidth) {
-      flex-flow: row wrap;
+    @media @media-small, @media-mobile {
+      display: block;
     }
   }
   &__button {
@@ -32,11 +36,19 @@
     box-sizing: border-box;
     border: 1px solid #FFFFFF;
     margin-top: 30px;
+
+    @media @media-small, @media-mobile {
+      width: 300px;
+    }
   }
   &__item {
     position: relative;
     padding-left: 60px;
     margin: 30px 20px 0 0;
+
+    @media @media-small, @media-mobile {
+      margin: 40px 20px 0 0;
+    }
 
     &-link {
       text-decoration: none;
@@ -45,35 +57,24 @@
     &-text {
       display: block;
 
-      &_git::before {
+      &_git::before, &_email::before, &_skype::before {
         content: "";
         position: absolute;
-        background-image: url("/static/img/icons/github.png");
         height: 100%;
         width: 100%;
         top: 0;
         right: 0;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;        
+      }
+
+      &_git::before {
+        background-image: url("/static/img/icons/github.png");
       }
       &_email::before {
-        content: "";
-        position: absolute;
         background-image: url("/static/img/icons/email.png");
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        background-repeat: no-repeat;
       }
       &_skype::before {
-        content: "";
-        position: absolute;
         background-image: url("/static/img/icons/skype.png");
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        background-repeat: no-repeat;
       }            
     }
   }
