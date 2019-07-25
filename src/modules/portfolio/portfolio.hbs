@@ -2,25 +2,9 @@
   <div class="l-layout">
     <div class="portfolio__title">Portfolio</div>
     <div class="portfolio__cases">
-      <div class="portfolio__items">
-        <div class="portfolio__preview">
-          <img class="portfolio__preview-logo" src="static/img/icons/jhon.png">
-          <div class="portfolio__preview-background"><img class="portfolio__preview-image" src="static/img/mob_1.png"></div>
-        </div>
-        <div class="portfolio__info">
-          <div class="portfolio__info-title">Vivamus pulvinar</div>
-          <div class="portfolio__info-description">Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat</div>
-          <div class="portfolio__devices">
-            <div class="portfolio__devices-nav">
-              <span class="portfolio__devices-item">Desktop</span>
-              <span class="portfolio__devices-item">Tablet</span>
-              <span class="portfolio__devices-item">Mobile</span>
-            </div>
-            <div class="portfolio__devices-description">Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat</div>
-            <div class="portfolio__devices-image"></div>
-          </div>
-        </div>
-      </div>  
+      {{#each items}}
+        {{> portfolio-item}}
+      {{/each}}
     </div>
   </div>
 </div>  

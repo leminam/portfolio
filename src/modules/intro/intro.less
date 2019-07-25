@@ -4,11 +4,22 @@
 
   &__title {
     font: 700 36px/42px @Muller;
+
+    @media @media-small, @media-mobile {
+      font: 700 30px/42px @Muller;
+    }
   }
   &__info {
     vertical-align: middle;
     display: inline-block;
     max-width: 466px;
+
+    @media @media-tablet {
+      max-width: 290px;
+    }
+    @media @media-small, @media-mobile {
+      max-width: none;
+    }
   }
   &__inner {
     position: relative;
@@ -22,7 +33,7 @@
     height: 100%;
   }
   &__about {
-    font: 400 16px/28px @Muller;
+    font: 400 16px/26px @Muller;
     margin: 18px 0 30px 0;
   }
   &__button {
@@ -36,22 +47,30 @@
     cursor: pointer;
     box-sizing: border-box;
     border: none;
+
+    @media @media-small, @media-mobile {
+      width: 315px;
+    }
   }
   &__image {
     position: absolute;
-    right: 270px;
+    right: 218px;
     bottom: -160px;
     height: 450px;
     z-index: -1;
 
-    @media (max-width: @bigDesktop) {
+    @media @media-large {
       right: 70px;
+      bottom: -119px;
     }
-    @media (max-width: @bigTablet) {
+    @media @media-middle {
       right: 25px;
       height: 400px;
       bottom: -111px;
-    }    
+    }
+    @media @media-small, @media-mobile {
+      display: none;
+    }
   }
 }
 .intro::before {

@@ -1,15 +1,14 @@
-@bigDesktop: 1390px;
-@bigTablet: 1070px;
+@largeWidth: 1280px;
+@middleWidth: 992px;
 @tabletWidth: 768px;
+@smallWidth: 640px;
 @mobileWidth: 375px;
 
-@bigDesktops: ~"screen and (max-width:" @bigDesktop~")";
-@bigTablets: ~"screen and (max-width:" @bigTablet~")";
-@tabletWidths: ~"screen and (max-width:" @tabletWidth~")";
-@mobileWidths: ~"screen and (max-width:" @mobileWidth~")";
+@media-large: ~"screen and (max-width:" @largeWidth~")";
+@media-middle: ~"screen and (max-width:" @middleWidth~")";
+@media-tablet: ~"screen and (max-width:" @tabletWidth~")";
+@media-small: ~"screen and (max-width:" @smallWidth~")";
+@media-mobile: ~"screen and (max-width:" @mobileWidth~")";
 
 @color-black: #000000;
 @color-white: #ffffff;
-
-
-
