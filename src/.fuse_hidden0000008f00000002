@@ -13,7 +13,7 @@
     {{> modules/menu/menu}}
     {{> modules/intro/intro}}
     {{> modules/about/about}}
-    <div id="module-portfolio"></div>
+    {{> modules/portfolio/portfolio}}
     {{> modules/contact/contact}}
     </div>
   </div>
