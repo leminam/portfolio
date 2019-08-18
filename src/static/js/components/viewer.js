@@ -3,15 +3,12 @@ export default class Viewer {
     this.elem = elem;
     this.params = params;
 
-    this.cssElemType = this.params.cssElemType || '';
-    this.cssElemImage = this.params.cssElemImage || '';
-
     this.construct();
   }
 
   construct() {
-    this.elType = this.elem.getElementsByClassName('JS-View-Type')[0];
-    this.elImage = this.elem.getElementsByClassName('JS-View-Image')[0];
+    this.elsType = this.elem.getElementsByClassName('JS-View-Type');
+    this.elsImage = this.elem.getElementsByClassName('JS-View-Image');
 
     this.init();
     this.ready();
@@ -19,19 +16,36 @@ export default class Viewer {
 
   init() {
     var _this = this;
-    this.elType.addEventListener('click', this.types.bind(this));
-    this.elImage.addEventListener('click', this.images.bind(this));
+
+    let imagesArr = Array.prototype.slice.call(this.elsImage);
+    imagesArr.map(function(imageEl){
+      imageEl.addEventListener('click', _this.handleClickImage.bind(_this));
+    });
+
+    //let typesArr = Array.prototype.slice.call(this.elsType);
+    //typesArr.map(function(typeEl){
+      //typeEl.addEventListener('click', _this.handleClickType.bind(_this));
+    //});
+
+
+Array.from(document.getElementsByClassName('JS-View-Type')).forEach(
+  function(typeEl) {
+    typeEl.addEventListener('click', _this.handleClickType.bind(_this));
+    }
+);
+
+
   }
 
   ready() {
     this.elem.classList.add('JS-Viewer-Ready');
   }
 
-  types() {
-    this.elem.classList.add(this.cssElemType);
+  handleClickType() {
+    console.log('handle click type')
   }
 
-  images() {
-    this.elem.classList.add(this.cssElemImage);
+  handleClickImage() {
+    console.log('handle click image')
   }
 }
