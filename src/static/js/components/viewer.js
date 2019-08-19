@@ -17,24 +17,15 @@ export default class Viewer {
   init() {
     var _this = this;
 
-    let imagesArr = Array.prototype.slice.call(this.elsImage);
-    imagesArr.map(function(imageEl){
+    let imagesArr = this.elsImage;
+    Array.prototype.forEach.call(imagesArr, function(imageEl) {
       imageEl.addEventListener('click', _this.handleClickImage.bind(_this));
     });
 
-    //let typesArr = Array.prototype.slice.call(this.elsType);
-    //typesArr.map(function(typeEl){
-      //typeEl.addEventListener('click', _this.handleClickType.bind(_this));
-    //});
-
-
-Array.from(document.getElementsByClassName('JS-View-Type')).forEach(
-  function(typeEl) {
-    typeEl.addEventListener('click', _this.handleClickType.bind(_this));
-    }
-);
-
-
+    let typesArr = this.elsType;
+    Array.prototype.forEach.call(typesArr, function(typeEl) {
+      typeEl.addEventListener('click', _this.handleClickType.bind(_this));
+    });
   }
 
   ready() {
