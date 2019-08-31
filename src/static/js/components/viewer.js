@@ -33,7 +33,9 @@ export default class Viewer {
   }
 
   handleClickType() {
-    console.log('handle click type')
+    let clickType = document.getElementById('desktop');
+    this.setViewType(clickType);
+    console.log('clickType', clickType);
   }
 
   handleClickImage() {

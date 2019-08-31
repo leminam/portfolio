@@ -9,15 +9,15 @@
   </div>  
   <div class="JS-Viewer portfolio__devices">
     <div class="portfolio__devices-nav">
-      <span class="JS-View-Type portfolio__devices-item">Desktop</span>
-      <span class="JS-View-Type portfolio__devices-item portfolio__devices-item_space">Tablet</span>
-      <span class="JS-View-Type portfolio__devices-item">Mobile</span>
+      <span class="JS-View-Type portfolio__devices-item" data-type="desktop">Desktop</span>
+      <span class="JS-View-Type portfolio__devices-item portfolio__devices-item_space" data-type="tablet">Tablet</span>
+      <span class="JS-View-Type portfolio__devices-item" data-type="mobile">Mobile</span>
     </div>
     <div class="portfolio__devices-description">{{ devices_description }}</div>
     <div class="portfolio__devices-image">
-      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot">
-      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot">
-      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot">
+      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot" data-image="img1">
+      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot" data-image="img2">
+      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot" data-image="img3">
     </div>
   </div>
 </div>
