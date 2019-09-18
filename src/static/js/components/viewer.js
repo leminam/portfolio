@@ -2,6 +2,7 @@ export default class Viewer {
   constructor(elem, params = {}) {
     this.elem = elem;
     this.params = params;
+    this.currentType = null;
 
     this.construct();
   }
@@ -19,12 +20,12 @@ export default class Viewer {
 
     let imagesArr = this.elsImage;
     Array.prototype.forEach.call(imagesArr, function(imageEl) {
-      imageEl.addEventListener('click', _this.handleClickImage.bind(_this));
+      imageEl.addEventListener('click', _this.handleClickImage.bind(_this, imageEl));
     });
 
     let typesArr = this.elsType;
     Array.prototype.forEach.call(typesArr, function(typeEl) {
-      typeEl.addEventListener('click', _this.handleClickType.bind(_this));
+      typeEl.addEventListener('click', _this.handleClickType.bind(_this, typeEl));
     });
   }
 
@@ -32,8 +33,12 @@ export default class Viewer {
     this.elem.classList.add('JS-Viewer-Ready');
   }
 
-  handleClickType() {
-    let clickType = document.getElementById('desktop');
+  setViewType(type) {
+    this.currentType = type;
+  }
+
+  handleClickType(typeEl) {
+    let clickType = this.elsType;
     this.setViewType(clickType);
     console.log('clickType', clickType);
   }
