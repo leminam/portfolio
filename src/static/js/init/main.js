@@ -9,7 +9,7 @@ function initViewer() {
 
   const common = {};
 
-  Array.prototype.forEach.call(document.getElementsByClassName('JS-Viewer'), function(elem) {
+  Array.prototype.forEach.call(document.getElementsByClassName('JS-View'), function(elem) {
     if (!elem.classList.contains("JS-Viewer-Ready")) {
       const elParams = GLOBAL.parseData(elem.dataset.viewerParams);
       const params = Object.assign({}, common, elParams);

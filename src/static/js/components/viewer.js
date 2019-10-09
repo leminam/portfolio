@@ -3,6 +3,7 @@ export default class Viewer {
     this.elem = elem;
     this.params = params;
     this.currentType = null;
+    this.currentImage = null;
 
     this.construct();
   }
@@ -10,6 +11,9 @@ export default class Viewer {
   construct() {
     this.elsType = this.elem.getElementsByClassName('JS-View-Type');
     this.elsImage = this.elem.getElementsByClassName('JS-View-Image');
+
+    this.elWrapper = this.elem.getElementsByClassName('JS-View-Wrapper')[0];
+    this.elCurrent = this.elem.getElementsByClassName('JS-View-Current')[0];
 
     this.init();
     this.ready();
@@ -37,13 +41,17 @@ export default class Viewer {
     this.currentType = type;
   }
 
-  handleClickType(typeEl) {
-    let clickType = this.elsType;
-    this.setViewType(clickType);
-    console.log('clickType', clickType);
+  setViewImage(image) {
+    this.currentImage = image;
   }
 
-  handleClickImage() {
-    console.log('handle click image')
+  handleClickType(typeEl) {
+    this.setViewType(typeEl.dataset.type);
+    console.log('clickType', typeEl.dataset.type);
+  }
+
+  handleClickImage(imageEl) {
+    this.setViewImage(imageEl.dataset.image);
+    console.log('clickImage', imageEl.dataset.image);
   }
 }
