@@ -3,6 +3,14 @@ export default class Viewer {
     this.elem = elem;
     this.params = params;
     this.currentType = null;
+    this.currentImage = null;
+
+    // will get from params
+    this.devicesImages = {
+      desktop: "static/img/mac_3.png",
+      tablet: "static/img/ipad_2.png",
+      mobile: "static/img/mob_1.png",
+    }
 
     this.construct();
   }
@@ -10,6 +18,9 @@ export default class Viewer {
   construct() {
     this.elsType = this.elem.getElementsByClassName('JS-View-Type');
     this.elsImage = this.elem.getElementsByClassName('JS-View-Image');
+
+    this.elWrapper = this.elem.getElementsByClassName('JS-View-Wrapper')[0];
+    this.elCurrent = this.elem.getElementsByClassName('JS-View-Current')[0];
 
     this.init();
     this.ready();
@@ -34,16 +45,22 @@ export default class Viewer {
   }
 
   setViewType(type) {
-    this.currentType = type;
+    this.currentType = type; //rename to currentDevice
+    this.elWrapper.src = this.devicesImages[type];
+  }
+
+  setViewImage(image) {
+    this.currentImage = image;
+    this.elCurrent.src = image;
   }
 
   handleClickType(typeEl) {
-    let clickType = this.elsType;
-    this.setViewType(clickType);
-    console.log('clickType', clickType);
+    this.setViewType(typeEl.dataset.type);
+    console.log('clickType', typeEl.dataset.type);
   }
 
-  handleClickImage() {
-    console.log('handle click image')
+  handleClickImage(imageEl) {
+    this.setViewImage(imageEl.dataset.image);
+    console.log('clickImage', imageEl.dataset.image);
   }
 }
