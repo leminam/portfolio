@@ -1,8 +1,9 @@
 <div class="portfolio__item JS-View">
   <div class="portfolio__preview">
     <img class="portfolio__preview-logo" src="{{ logo }}">
-    <div class="portfolio__preview-background {{ previewBackgroundClass }}"><img class="JS-View-Wrapper portfolio__preview-image {{ portfolioPreviewClass }}" src="{{ device }}">
-    <img class="JS-View-Current portfolio__preview-image {{ portfolioPreviewClass }}" src="{{ device }}">
+    <div class="portfolio__preview-background {{ previewBackgroundClass }}">
+      <img class="JS-View-Wrapper portfolio__preview-device {{ portfolioPreviewDevice }} {{ portfolioPreviewDeviceSize }}" src="{{ device }}">
+      <img class="JS-View-Current portfolio__preview-image {{ portfolioPreviewImage }}" src="{{ screenshot }}">
     </div>
   </div>
   <div class="portfolio__info">
@@ -17,9 +18,9 @@
     </div>
     <div class="portfolio__devices-description">{{ devices_description }}</div>
     <div class="portfolio__devices-image">
-      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot" data-image="{{ screenshot }}">
-      <img src="static/img/screenshot_2.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/screenshot_2.png">
-      <img src="{{ screenshot }}" class="JS-View-Image portfolio__devices-screenshot" data-image="{{ screenshot }}">
+      <img src="static/img/john1-desk.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/john1-desk.png">
+      <img src="static/img/john4-tab.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/john4-tab.png">
+      <img src="static/img/john7-mob.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/john7-mob.png">
     </div>
   </div>
 </div>

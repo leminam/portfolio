@@ -7,8 +7,8 @@ export default class Viewer {
 
     // will get from params
     this.devicesImages = {
-      desktop: "static/img/mac_3.png",
-      tablet: "static/img/ipad_2.png",
+      desktop: "static/img/mac_1.png",
+      tablet: "static/img/ipad_1.png",
       mobile: "static/img/mob_1.png",
     }
 
