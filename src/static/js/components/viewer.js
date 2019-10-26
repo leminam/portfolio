@@ -2,7 +2,7 @@ export default class Viewer {
   constructor(elem, params = {}) {
     this.elem = elem;
     this.params = params;
-    this.currentType = null;
+    this.currentDevice = null;
     this.currentImage = null;
     this.currentWrapperClass = null;
 
@@ -27,7 +27,7 @@ export default class Viewer {
   }
 
   construct() {
-    this.elsType = this.elem.getElementsByClassName('JS-View-Type');
+    this.elsDevice = this.elem.getElementsByClassName('JS-View-Device');
     this.elsImage = this.elem.getElementsByClassName('JS-View-Image');
 
     this.elWrapper = this.elem.getElementsByClassName('JS-View-Wrapper')[0];
@@ -45,9 +45,9 @@ export default class Viewer {
       imageEl.addEventListener('click', _this.handleClickImage.bind(_this, imageEl));
     });
 
-    let typesArr = this.elsType;
-    Array.prototype.forEach.call(typesArr, function(typeEl) {
-      typeEl.addEventListener('click', _this.handleClickType.bind(_this, typeEl));
+    let devicesArr = this.elsDevice;
+    Array.prototype.forEach.call(devicesArr, function(deviceEl) {
+      deviceEl.addEventListener('click', _this.handleClickDevice.bind(_this, deviceEl));
     });
   }
 
@@ -55,13 +55,13 @@ export default class Viewer {
     this.elem.classList.add('JS-Viewer-Ready');
   }
 
-  setViewType(type) {
-    this.currentType = type; //ToDo: rename to currentDevice
-    this.elWrapper.src = this.devicesImages[type];
+  setViewDevice(device) {
+    this.currentDevice = device; //ToDo: rename to currentDevice
+    this.elWrapper.src = this.devicesImages[device];
 
-    // this.elWrapper.src = this.devices[type].image;
+    // this.elWrapper.src = this.devices[device].image;
     // set current class
-    // this.elWrapper.classList.add(this.devices[type].class);
+    // this.elWrapper.classList.add(this.devices[device].class);
 
     // set appropriate image
   }
@@ -71,9 +71,9 @@ export default class Viewer {
     this.elCurrent.src = image;
   }
 
-  handleClickType(typeEl) {
-    this.setViewType(typeEl.dataset.type);
-    console.log('clickType', typeEl.dataset.type);
+  handleClickDevice(deviceEl) {
+    this.setViewDevice(deviceEl.dataset.device);
+    console.log('clickDevice', deviceEl.dataset.device);
   }
 
   handleClickImage(imageEl) {

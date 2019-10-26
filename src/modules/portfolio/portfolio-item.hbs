@@ -2,8 +2,8 @@
   <div class="portfolio__preview">
     <img class="portfolio__preview-logo" src="{{ logo }}">
     <div class="portfolio__preview-background {{ previewBackgroundClass }}">
-      <img class="JS-View-Wrapper portfolio__preview-device {{ portfolioPreviewDevice }} {{ portfolioPreviewDeviceSize }}" src="{{ device }}">
-      <img class="JS-View-Current portfolio__preview-image {{ portfolioPreviewImage }}" src="{{ screenshot }}">
+      <img class="JS-View-Wrapper portfolio__preview-device {{ portfolioPreviewDevice }}" src="{{ device_wrapper }}" data-viewer-params="{'{{ device }}': {'image': '{{ device_wrapper }}', 'class': '{{ portfolioPreviewDevice }}'}}">
+      <img class="JS-View-Current portfolio__preview-image {{ portfolioPreviewImage }}" src="{{ screenshot }}" data-viewer-params="{'{{ device }}': {'image': '{{ screenshot }}', 'class': '{{ portfolioPreviewImage }}'}}">
     </div>
   </div>
   <div class="portfolio__info">
@@ -12,9 +12,9 @@
   </div>  
   <div class="portfolio__devices">
     <div class="portfolio__devices-nav">
-      <span class="JS-View-Type portfolio__devices-item" data-type="desktop">Desktop</span>
-      <span class="JS-View-Type portfolio__devices-item portfolio__devices-item_space" data-type="tablet">Tablet</span>
-      <span class="JS-View-Type portfolio__devices-item" data-type="mobile">Mobile</span>
+      <span class="JS-View-Device portfolio__devices-item" data-type="desktop">Desktop</span>
+      <span class="JS-View-Device portfolio__devices-item portfolio__devices-item_space" data-type="tablet">Tablet</span>
+      <span class="JS-View-Device portfolio__devices-item" data-type="mobile">Mobile</span>
     </div>
     <div class="portfolio__devices-description">{{ devices_description }}</div>
     <div class="portfolio__devices-image">
