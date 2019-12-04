@@ -17,10 +17,18 @@ export default class Viewer {
 
     // will get from params
     this.devices = {
+      desktop: {
+        image: this.params.desktop.image,
+        class: this.params.desktop.class,
+      },      
       tablet: {
-        // image: this.params.tablet.image,
-        // class: this.params.tablet.class,
+        image: this.params.tablet.image,
+        class: this.params.tablet.class,
       },
+      mobile: {
+        image: this.params.mobile.image,
+        class: this.params.mobile.class,
+      },      
     }
 
     this.construct();
