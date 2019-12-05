@@ -54,6 +54,10 @@
       height: 222px;
       width: 343px;
       box-sizing: border-box;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @media @media-large {
         margin-right: 35px;
@@ -70,35 +74,53 @@
       }
       
       &_mob {
-        padding: 5px 118px 0 119px;
+        // padding: 5px 0 0 119px;
 
         @media @media-small, @media-mobile {
           padding: 0;
         }
       }
       &_ipad {
-        padding: 10px 98px 6px 98px;
+        // padding: 33px 0 0 64px;
 
         @media @media-small, @media-mobile {
           padding: 0;
         }           
       }
       &_mac {
-        padding: 35px 30px 23px 38px;
+        // padding: 35px 0 0 38px;
 
         @media @media-small, @media-mobile {
           padding: 0;
         }           
       }
     }
-    &-image {
-      height: 214px;
+    &-device {
 
+      &_mob {
+        height: 214px;
+      }
       &_ipad {
-        height: 203px;
+        height: 155px;
       }
       &_mac {
         height: 155px;
+      }
+    }
+    &-image {
+      position: absolute;
+
+      &_mob {
+        top: 33px;
+        left: 128px;
+      }
+      &_ipad {
+        top: 43px;
+        left: 73px;
+      }
+      &_mac {
+        top: 48px;
+        left: 75px;
       }
     }
   }

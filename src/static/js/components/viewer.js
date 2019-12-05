@@ -2,21 +2,40 @@ export default class Viewer {
   constructor(elem, params = {}) {
     this.elem = elem;
     this.params = params;
-    this.currentType = null;
+    this.currentDevice = null;
     this.currentImage = null;
+    this.currentWrapperClass = null;
+
+    // ToDo: temp will delete
+    // как параметры в меню
+    // <div class="JS-Menu header__menu" data-viewer-params="{'desktop': {'image': 'static/img/mac_1.png', 'class': 'portfolio__preview-size_mob'}}">
+    this.devicesImages = {
+      desktop: "static/img/mac_1.png",
+      tablet: "static/img/ipad_1.png",
+      mobile: "static/img/mob_1.png",
+    }
 
     // will get from params
-    this.devicesImages = {
-      desktop: "static/img/mac_3.png",
-      tablet: "static/img/ipad_2.png",
-      mobile: "static/img/mob_1.png",
+    this.devices = {
+      desktop: {
+        image: this.params.desktop.image,
+        class: this.params.desktop.class,
+      },      
+      tablet: {
+        image: this.params.tablet.image,
+        class: this.params.tablet.class,
+      },
+      mobile: {
+        image: this.params.mobile.image,
+        class: this.params.mobile.class,
+      },      
     }
 
     this.construct();
   }
 
   construct() {
-    this.elsType = this.elem.getElementsByClassName('JS-View-Type');
+    this.elsDevice = this.elem.getElementsByClassName('JS-View-Device');
     this.elsImage = this.elem.getElementsByClassName('JS-View-Image');
 
     this.elWrapper = this.elem.getElementsByClassName('JS-View-Wrapper')[0];
@@ -34,9 +53,9 @@ export default class Viewer {
       imageEl.addEventListener('click', _this.handleClickImage.bind(_this, imageEl));
     });
 
-    let typesArr = this.elsType;
-    Array.prototype.forEach.call(typesArr, function(typeEl) {
-      typeEl.addEventListener('click', _this.handleClickType.bind(_this, typeEl));
+    let devicesArr = this.elsDevice;
+    Array.prototype.forEach.call(devicesArr, function(deviceEl) {
+      deviceEl.addEventListener('click', _this.handleClickDevice.bind(_this, deviceEl));
     });
   }
 
@@ -44,9 +63,15 @@ export default class Viewer {
     this.elem.classList.add('JS-Viewer-Ready');
   }
 
-  setViewType(type) {
-    this.currentType = type; //rename to currentDevice
-    this.elWrapper.src = this.devicesImages[type];
+  setViewDevice(device) {
+    this.currentDevice = device; //ToDo: rename to currentDevice
+    this.elWrapper.src = this.devicesImages[device];
+
+    // this.elWrapper.src = this.devices[device].image;
+    // set current class
+    // this.elWrapper.classList.add(this.devices[device].class);
+
+    // set appropriate image
   }
 
   setViewImage(image) {
@@ -54,9 +79,9 @@ export default class Viewer {
     this.elCurrent.src = image;
   }
 
-  handleClickType(typeEl) {
-    this.setViewType(typeEl.dataset.type);
-    console.log('clickType', typeEl.dataset.type);
+  handleClickDevice(deviceEl) {
+    this.setViewDevice(deviceEl.dataset.device);
+    console.log('clickDevice', deviceEl.dataset.device);
   }
 
   handleClickImage(imageEl) {
