@@ -6,16 +6,12 @@ export default class Viewer {
     this.currentImage = null;
     this.currentWrapperClass = null;
 
-    // ToDo: temp will delete
-    // как параметры в меню
-    // <div class="JS-Menu header__menu" data-viewer-params="{'desktop': {'image': 'static/img/mac_1.png', 'class': 'portfolio__preview-size_mob'}}">
     this.devicesImages = {
       desktop: "static/img/mac_1.png",
       tablet: "static/img/ipad_1.png",
       mobile: "static/img/mob_1.png",
     }
 
-    // will get from params
     this.devices = {
       desktop: {
         image: this.params.desktop.image,
@@ -64,14 +60,12 @@ export default class Viewer {
   }
 
   setViewDevice(device) {
-    this.currentDevice = device; //ToDo: rename to currentDevice
+    this.currentDevice = device;
     this.elWrapper.src = this.devicesImages[device];
 
     // this.elWrapper.src = this.devices[device].image;
     // set current class
     // this.elWrapper.classList.add(this.devices[device].class);
-
-    // set appropriate image
   }
 
   setViewImage(image) {

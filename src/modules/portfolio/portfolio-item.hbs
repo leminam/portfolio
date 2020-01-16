@@ -3,7 +3,7 @@
     <img class="portfolio__preview-logo" src="{{ logo }}">
     <div class="portfolio__preview-background {{ previewBackgroundClass }}">
       <img class="JS-View-Wrapper portfolio__preview-device {{ portfolioPreviewDevice }}" src="{{ device_wrapper }}" data-viewer-params="{'{{ device }}': {'image': '{{ device_wrapper }}', 'class': '{{ portfolioPreviewDevice }}'}}">
-      <img class="JS-View-Current portfolio__preview-image {{ portfolioPreviewImage }}" src="{{ screenshot }}" data-viewer-params="{'{{ device }}': {'image': '{{ screenshot }}', 'class': '{{ portfolioPreviewImage }}'}}">
+      <img class="JS-View-Current portfolio__preview-image {{ portfolioPreviewImage }}" src="{{ screenshot }}">
     </div>
   </div>
   <div class="portfolio__info">
@@ -18,9 +18,9 @@
     </div>
     <div class="portfolio__devices-description">{{ devices_description }}</div>
     <div class="portfolio__devices-image">
-      <img src="static/img/john1-desk.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/john1-desk.png">
-      <img src="static/img/john4-tab.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/john4-tab.png">
-      <img src="static/img/john7-mob.png" class="JS-View-Image portfolio__devices-screenshot" data-image="static/img/john7-mob.png">
+      <img src="static/img/john1-desk.png" class="JS-View-Image portfolio__devices-screenshot" data-images="{{desktop: static/img/john7-desk.png, mob: static/img/john7-mob.png, tab: static/img/john7-tab.png}}">
+      <img src="static/img/john4-tab.png" class="JS-View-Image portfolio__devices-screenshot" data-images="static/img/john4-tab.png">
+      <img src="static/img/john7-mob.png" class="JS-View-Image portfolio__devices-screenshot" data-images="static/img/john7-mob.png">
     </div>
   </div>
 </div>
