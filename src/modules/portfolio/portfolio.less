@@ -21,6 +21,42 @@
     grid-template-areas: "preview info"
     "preview devices";
 
+    &_desktop {
+      .portfolio__devices-image_desktop {
+        display: block;
+      }
+      .portfolio__devices-image_tablet {
+        display: none;
+      }
+      .portfolio__devices-image_mobile {
+        display: none;
+      }
+    }
+
+    &_tablet {
+      .portfolio__devices-image_desktop {
+        display: none;
+      }
+      .portfolio__devices-image_tablet {
+        display: block;
+      }
+      .portfolio__devices-image_mobile {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      .portfolio__devices-image_desktop {
+        display: none;
+      }
+      .portfolio__devices-image_tablet {
+        display: none;
+      }
+      .portfolio__devices-image_mobile {
+        display: block;
+      }
+    }
+
     @media @media-large {
       padding: 35px 45px 48px 45px;
     }

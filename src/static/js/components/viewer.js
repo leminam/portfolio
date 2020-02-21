@@ -12,19 +12,15 @@ export default class Viewer {
       mobile: "static/img/mob_1.png",
     }
 
-    this.devices = {
-      desktop: {
-        image: this.params.desktop.image,
-        class: this.params.desktop.class,
-      },      
-      tablet: {
-        image: this.params.tablet.image,
-        class: this.params.tablet.class,
-      },
-      mobile: {
-        image: this.params.mobile.image,
-        class: this.params.mobile.class,
-      },      
+    this.devicesRootElClasses = {
+      desktop: "portfolio__item_desktop",
+      tablet: "portfolio__item_tablet",
+      mobile: "portfolio__item_mobile",
+    }
+
+    this.allTypes = [];
+    for (const type in this.devicesRootElClasses) {
+      this.allTypes.push(this.devicesRootElClasses[type])
     }
 
     this.construct();
@@ -59,13 +55,25 @@ export default class Viewer {
     this.elem.classList.add('JS-Viewer-Ready');
   }
 
+  clearRootClassNameFromTypes() {
+    const newList = []
+    this.elem.classList.forEach(classItem => {
+      if (!this.allTypes.includes(classItem)) {
+        newList.push(classItem)
+      }
+    })
+
+    this.elem.classList = ''
+    newList.forEach(item => { this.elem.classList.add(item) })
+  }
+
   setViewDevice(device) {
     this.currentDevice = device;
     this.elWrapper.src = this.devicesImages[device];
 
-    // this.elWrapper.src = this.devices[device].image;
-    // set current class
-    // this.elWrapper.classList.add(this.devices[device].class);
+    this.clearRootClassNameFromTypes()
+    const className = this.devicesRootElClasses[device];
+    this.elem.classList.add(className);
   }
 
   setViewImage(image) {
@@ -74,12 +82,10 @@ export default class Viewer {
   }
 
   handleClickDevice(deviceEl) {
-    this.setViewDevice(deviceEl.dataset.device);
-    console.log('clickDevice', deviceEl.dataset.device);
+    this.setViewDevice(deviceEl.dataset.type);
   }
 
   handleClickImage(imageEl) {
-    this.setViewImage(imageEl.dataset.image);
-    console.log('clickImage', imageEl.dataset.image);
+    this.setViewImage(imageEl.src);
   }
 }
