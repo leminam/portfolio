@@ -13,6 +13,32 @@ document.addEventListener("DOMContentLoaded", function() {
         info_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",
         devices_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",        
         screenshot: "static/img/john1-desk.png",
+        images: [
+          {
+            type: 'desktop',
+            items: [
+              {src :'static/img/john1-desk.png', type: 'desktop'},
+              {src: 'static/img/john2-desk.png', type: 'desktop'},
+              {src: 'static/img/john3-desk.png', type: 'desktop'},
+            ]
+          },
+          {
+            type: 'tablet',
+            items: [
+              {src :'static/img/john4-tab.png', type: 'tablet'},
+              {src: 'static/img/john5-tab.png', type: 'tablet'},
+              {src: 'static/img/john6-tab.png', type: 'tablet'},
+            ]
+          },
+          {
+            type: 'mobile',
+            items: [
+              {src :'static/img/john7-mob.png', type: 'mobile'},
+              {src: 'static/img/john8-mob.png', type: 'mobile'},
+              {src: 'static/img/john9-mob.png', type: 'mobile'},
+            ]
+          },
+        ]
       },
       { logo: "static/img/icons/alibi.png",
         previewBackgroundClass: "portfolio__preview-background_tab",

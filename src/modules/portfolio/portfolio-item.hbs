@@ -17,20 +17,16 @@
       <span class="JS-View-Device portfolio__devices-item portfolio__devices-item_mobile" data-type="mobile">Mobile</span>
     </div>
     <div class="portfolio__devices-description">{{ devices_description }}</div>
-    <div class="portfolio__devices-image portfolio__devices-image_desktop">
-      <img src="static/img/john1-desk.png" class="JS-View-Image portfolio__devices-screenshot" data-device="desktop">
-      <img src="static/img/john2-desk.png" class="JS-View-Image portfolio__devices-screenshot" data-device="desktop">
-      <img src="static/img/john3-desk.png" class="JS-View-Image portfolio__devices-screenshot" data-device="desktop">
-    </div>
-    <div class="portfolio__devices-image portfolio__devices-image_tablet">
-      <img src="static/img/john4-tab.png" class="JS-View-Image portfolio__devices-screenshot" data-device="tablet">
-      <img src="static/img/john5-tab.png" class="JS-View-Image portfolio__devices-screenshot" data-device="tablet">
-      <img src="static/img/john6-tab.png" class="JS-View-Image portfolio__devices-screenshot" data-device="tablet">
-    </div>
-    <div class="portfolio__devices-image portfolio__devices-image_mobile">
-      <img src="static/img/john7-mob.png" class="JS-View-Image portfolio__devices-screenshot" data-device="mobile">
-      <img src="static/img/john8-mob.png" class="JS-View-Image portfolio__devices-screenshot" data-device="mobile">
-      <img src="static/img/john9-mob.png" class="JS-View-Image portfolio__devices-screenshot" data-device="mobile">
-    </div>
+    {{#each images }}
+      <div class="portfolio__devices-image portfolio__devices-image_{{ type }}">
+      {{#each items }}
+        <img
+          class="JS-View-Image portfolio__devices-screenshot"
+          src="{{ src }}"
+          data-device="{{ type }}"
+        />
+      {{/each}}
+      </div>
+    {{/each}}
   </div>
 </div>
