@@ -4,11 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
   div.innerHTML = portfolioTemplate({
     items: [
       { logo: "static/img/icons/jhon.png",
-        previewBackgroundClass: "portfolio__preview-background_desktop",
-        portfolioPreviewDevice: "portfolio__preview-device_desktop",
-        portfolioPreviewImage: "portfolio__preview-image_desktop",
-        device: "desktop",
-        device_wrapper: "static/img/mac_1.png",
         title: "Vivamus pulvinar",
         info_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",
         devices_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",        

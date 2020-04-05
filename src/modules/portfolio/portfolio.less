@@ -115,47 +115,12 @@
         width: 95%;
         background-color: transparent;
         box-shadow: none;
-      }
-      
-      &_mob {
-        // padding: 5px 0 0 119px;
-
-        @media @media-small, @media-mobile {
-          padding: 0;
-        }
-      }
-      &_tab {
-        // padding: 33px 0 0 64px;
-
-        @media @media-small, @media-mobile {
-          padding: 0;
-        }           
-      }
-      &_desktop {
-        // padding: 35px 0 0 38px;
-
-        @media @media-small, @media-mobile {
-          padding: 0;
-        }           
+        padding: 0;
       }
     }
 
     &-image {
       position: absolute;
-
-      &_mob {
-        // top: 33px;
-        // left: 128px;
-      }
-      &_tab {
-        // top: 2px;
-        // left: 2px;
-      }
-      &_desktop {
-        // top: 2px;
-        // left: 75px;
-        // width: 263px;
-      }
     }
   }
   &__info {
@@ -223,16 +188,8 @@
     }
   }
 }
-.portfolio__item_desktop .portfolio__devices-item_desktop {
-  font-weight: 700;
-  opacity: 1;
-  border-bottom: 3px solid #444287;
-}
-.portfolio__item_tablet .portfolio__devices-item_tablet {
-  font-weight: 700;
-  opacity: 1;
-  border-bottom: 3px solid #444287;
-}
+.portfolio__item_desktop .portfolio__devices-item_desktop,
+.portfolio__item_tablet .portfolio__devices-item_tablet,
 .portfolio__item_mobile .portfolio__devices-item_mobile {
   font-weight: 700;
   opacity: 1;
