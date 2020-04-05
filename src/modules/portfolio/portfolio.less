@@ -116,14 +116,14 @@
           padding: 0;
         }
       }
-      &_ipad {
+      &_tab {
         // padding: 33px 0 0 64px;
 
         @media @media-small, @media-mobile {
           padding: 0;
         }           
       }
-      &_mac {
+      &_desktop {
         // padding: 35px 0 0 38px;
 
         @media @media-small, @media-mobile {
@@ -136,27 +136,27 @@
       &_mob {
         height: 214px;
       }
-      &_ipad {
-        height: 155px;
+      &_tab {
+        height: 154px;
       }
-      &_mac {
-        height: 155px;
+      &_desktop {
+        height: 154px;
       }
     }
     &-image {
       position: absolute;
 
       &_mob {
-        top: 33px;
-        left: 128px;
+        //top: 33px;
+        //left: 128px;
       }
-      &_ipad {
-        top: 43px;
-        left: 73px;
+      &_tab {
+        //top: 2px;
+        //left: 2px;
       }
-      &_mac {
-        top: 48px;
-        left: 75px;
+      &_desktop {
+        //top: 2px;
+        //left: 75px;
       }
     }
   }
@@ -224,4 +224,19 @@
       }
     }
   }
+}
+.portfolio__item_desktop .portfolio__devices-item_desktop {
+  font-weight: 700;
+  opacity: 1;
+  border-bottom: 3px solid #444287;
+}
+.portfolio__item_tablet .portfolio__devices-item_tablet {
+  font-weight: 700;
+  opacity: 1;
+  border-bottom: 3px solid #444287;
+}
+.portfolio__item_mobile .portfolio__devices-item_mobile {
+  font-weight: 700;
+  opacity: 1;
+  border-bottom: 3px solid #444287;
 }
