@@ -74,6 +74,18 @@ export default class Viewer {
     this.clearRootClassNameFromTypes()
     const className = this.devicesRootElClasses[device];
     this.elem.classList.add(className);
+
+    this.setViewImage(this.getFirstImageByDevice(device))
+  }
+
+  getFirstImageByDevice(device) {
+    let firstImg;
+    Array.prototype.map.call(this.elsImage, el => {
+      if (device === el.dataset.device && !firstImg) {
+        firstImg = el.src
+      }
+    })
+    return firstImg
   }
 
   setViewImage(image) {
