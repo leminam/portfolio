@@ -21,6 +21,51 @@
     grid-template-areas: "preview info"
     "preview devices";
 
+    &_desktop {
+      .portfolio__devices-image_desktop {
+        display: block;
+      }
+      .portfolio__devices-image_tablet {
+        display: none;
+      }
+      .portfolio__devices-image_mobile {
+        display: none;
+      }
+      .portfolio__preview-device {
+        height: 154px;
+      }
+    }
+
+    &_tablet {
+      .portfolio__devices-image_desktop {
+        display: none;
+      }
+      .portfolio__devices-image_tablet {
+        display: block;
+      }
+      .portfolio__devices-image_mobile {
+        display: none;
+      }
+      .portfolio__preview-device {
+        height: 154px;
+      }
+    }
+
+    &_mobile {
+      .portfolio__devices-image_desktop {
+        display: none;
+      }
+      .portfolio__devices-image_tablet {
+        display: none;
+      }
+      .portfolio__devices-image_mobile {
+        display: block;
+      }
+      .portfolio__preview-device {
+        height: 214px;
+      }
+    }
+
     @media @media-large {
       padding: 35px 45px 48px 45px;
     }
@@ -47,13 +92,16 @@
     }
 
     &-background {
-      background-color: #EFF0F5;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
       margin-right: 68px;
       height: 222px;
       width: 343px;
       box-sizing: border-box;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @media @media-large {
         margin-right: 35px;
@@ -67,39 +115,12 @@
         width: 95%;
         background-color: transparent;
         box-shadow: none;
-      }
-      
-      &_mob {
-        padding: 5px 118px 0 119px;
-
-        @media @media-small, @media-mobile {
-          padding: 0;
-        }
-      }
-      &_ipad {
-        padding: 10px 98px 6px 98px;
-
-        @media @media-small, @media-mobile {
-          padding: 0;
-        }           
-      }
-      &_mac {
-        padding: 35px 30px 23px 38px;
-
-        @media @media-small, @media-mobile {
-          padding: 0;
-        }           
+        padding: 0;
       }
     }
-    &-image {
-      height: 214px;
 
-      &_ipad {
-        height: 203px;
-      }
-      &_mac {
-        height: 155px;
-      }
+    &-image {
+      position: absolute;
     }
   }
   &__info {
@@ -137,13 +158,14 @@
       font: 400 16px/21px @Muller;
       padding-bottom: 10px;
     }
-    &-link {
+    &-item {
       text-decoration: none;
       color: @color-black;
       opacity: 0.5;
       padding-bottom: 9px;
+      cursor: pointer;
     }
-    &-link:hover {
+    &-item:hover {
       font-weight: 700;
       opacity: 1;
       border-bottom: 3px solid #444287;
@@ -165,4 +187,11 @@
       }
     }
   }
+}
+.portfolio__item_desktop .portfolio__devices-item_desktop,
+.portfolio__item_tablet .portfolio__devices-item_tablet,
+.portfolio__item_mobile .portfolio__devices-item_mobile {
+  font-weight: 700;
+  opacity: 1;
+  border-bottom: 3px solid #444287;
 }

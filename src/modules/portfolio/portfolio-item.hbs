@@ -1,7 +1,13 @@
-<div class="portfolio__item">
+<div class="portfolio__item portfolio__item_desktop JS-View">
   <div class="portfolio__preview">
     <img class="portfolio__preview-logo" src="{{ logo }}">
-    <div class="portfolio__preview-background {{ previewBackgroundClass }}"><img class="portfolio__preview-image {{ portfolioPreviewClass }}" src="{{ device }}"></div>
+    <div class="portfolio__preview-background">
+      <img
+        class="JS-View-Wrapper portfolio__preview-device"
+        src="static/img/mac_1.png"
+      />
+      <img class="JS-View-Current portfolio__preview-image" src="{{ screenshot }}">
+    </div>
   </div>
   <div class="portfolio__info">
     <div class="portfolio__info-title">{{ title }}</div>
@@ -9,21 +15,21 @@
   </div>  
   <div class="portfolio__devices">
     <div class="portfolio__devices-nav">
-      <span class="portfolio__devices-item">
-        <a href="#" class="portfolio__devices-link">Desktop</a>
-      </span>
-      <span class="portfolio__devices-item portfolio__devices-item_space">
-        <a href="#" class="portfolio__devices-link">Tablet</a>
-      </span>
-      <span class="portfolio__devices-item">
-        <a href="#" class="portfolio__devices-link">Mobile</a>
-      </span>
+      <span class="JS-View-Device portfolio__devices-item portfolio__devices-item_desktop" data-type="desktop">Desktop</span>
+      <span class="JS-View-Device portfolio__devices-item portfolio__devices-item_tablet portfolio__devices-item_space" data-type="tablet">Tablet</span>
+      <span class="JS-View-Device portfolio__devices-item portfolio__devices-item_mobile" data-type="mobile">Mobile</span>
     </div>
     <div class="portfolio__devices-description">{{ devices_description }}</div>
-    <div class="portfolio__devices-image">
-      <img src="{{ screenshot }}" class="portfolio__devices-screenshot">
-      <img src="{{ screenshot }}" class="portfolio__devices-screenshot">
-      <img src="{{ screenshot }}" class="portfolio__devices-screenshot">
-    </div>
+    {{#each images }}
+      <div class="portfolio__devices-image portfolio__devices-image_{{ type }}">
+      {{#each items }}
+        <img
+          class="JS-View-Image portfolio__devices-screenshot"
+          src="{{ src }}"
+          data-device="{{ type }}"
+        />
+      {{/each}}
+      </div>
+    {{/each}}
   </div>
 </div>
