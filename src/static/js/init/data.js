@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
           {
             type: 'desktop',
             items: [
-              {src :'static/img/content/tamtam/tam1-desk.png', type: 'desktop'},
-              {src: 'static/img/content/tamtam/tam5-desk.png', type: 'desktop'},
+              {src :'static/img/content/tamtam/tam5-desk.png', type: 'desktop'},
+              {src: 'static/img/content/tamtam/tam1-desk.png', type: 'desktop'},
               {src: 'static/img/content/tamtam/tam6-desk.png', type: 'desktop'},
             ]
           },
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
               {src: 'static/img/content/tamtam/tam9-mob.png', type: 'mobile'},
             ]
           },
-        ]        
+        ]
       },
       { logo: "static/img/icons/ave.png",
         title: "Vivamus pulvinar",
@@ -79,6 +79,22 @@ document.addEventListener("DOMContentLoaded", function() {
               {src :'static/img/content/ave/ave1-desk.png', type: 'desktop'},
               {src: 'static/img/content/ave/ave2-desk.png', type: 'desktop'},
               {src: 'static/img/content/ave/ave3-desk.png', type: 'desktop'},
+            ]
+          },
+          {
+            type: 'tablet',
+            items: [
+              {src :'static/img/content/ave/ave4-tab.png', type: 'tablet'},
+              {src: 'static/img/content/ave/ave5-tab.png', type: 'tablet'},
+              {src: 'static/img/content/ave/ave6-tab.png', type: 'tablet'},
+            ]
+          },
+          {
+            type: 'mobile',
+            items: [
+              {src :'static/img/content/ave/ave7-mob.png', type: 'mobile'},
+              {src: 'static/img/content/ave/ave8-mob.png', type: 'mobile'},
+              {src: 'static/img/content/ave/ave9-mob.png', type: 'mobile'},
             ]
           },
         ]

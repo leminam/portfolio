@@ -11,13 +11,13 @@
     }
   }
   &__item {
-    padding: 35px 91px 48px 54px;
+    padding: 35px 91px 40px 54px;
     background-color: @color-white;
     margin-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr;
     grid-template-areas: "preview info"
     "preview devices";
 
@@ -85,14 +85,14 @@
   &__preview {
     grid-area: preview;
     display: grid;
-    grid-template-rows: 83px;
+    grid-template-rows: 70px;
 
     @media @media-middle {
       grid-template-rows: 60px;
     }
 
     &-background {
-      background-color: #EFF0F5;;
+      background-color: #EFF0F5;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
       border-radius: 4px;
       margin-right: 68px;
@@ -141,8 +141,20 @@
     &-description {
       font: 400 16px/22px @Muller;
       opacity: 0.8;
-      margin: 9px 0 30px 0;
+      margin: 9px 0 20px 0;
     }
+    &-demo {
+      margin-bottom: 20px;
+    }
+    &-link {
+      text-decoration: none;
+      font: 400 16px/22px @Muller;
+      color: #444287;
+      opacity: 0.7;
+    }
+    &-link:hover {
+      opacity: 1;
+    }    
   }
   &__devices {
     grid-area: devices;
