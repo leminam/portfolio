@@ -40,5 +40,8 @@
   },
   "dependencies": {
     "swiper": "^4.4.6"
+  },
+  "engines": {
+    "node": "10.16.3"
   }
 }
