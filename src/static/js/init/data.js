@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
   div.innerHTML = portfolioTemplate({
     items: [
       { logo: "static/img/icons/jhon.png",
-        title: "Vivamus pulvinar",
-        info_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",
-        devices_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",        
+        title: "Musician John Doe",
+        info_description: "Сайт музыканта с интересными фактами, композициями и биографией",
+        devices_description: "Сайт музыканта с интересными фактами, композициями и биографией",        
         screenshot: "static/img/content/musician/john1-desk.png",
         images: [
           {
@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
       },
       { logo: "static/img/icons/alibi.png",
-        title: "Vivamus pulvinar",
-        info_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",
-        devices_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",        
+        title: "Tam-Tam agency",
+        info_description: "Сайт-визитка агентства с фотографиями из профиля инстаграма",
+        devices_description: "Сайт-визитка агентства с фотографиями из профиля инстаграма",   
         screenshot: "static/img/content/tamtam/tam5-desk.png",
         images: [
           {
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
       },
       { logo: "static/img/icons/ave.png",
-        title: "Vivamus pulvinar",
-        info_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",
-        devices_description: "Vivamus pulvinar sem non urna vulputate, a molestie nibh volutp. Ut at sem nec justo consequat",        
+        title: "Avenue fashion",
+        info_description: "Сайт интернет-магазина брендовой одежды с карточкой товара",
+        devices_description: "Сайт интернет-магазина брендовой одежды с карточкой товара",
         screenshot: "static/img/content/ave/ave1-desk.png",
         images: [
           {
