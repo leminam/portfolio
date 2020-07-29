@@ -99,5 +99,17 @@ export default class Viewer {
 
   handleClickImage(imageEl) {
     this.setViewImage(imageEl.src);
+    this.removeActiveImageClass();
+    this.addActiveImageClass(imageEl);
+  }
+
+  removeActiveImageClass() {
+    Array.prototype.map.call(this.elsImage, el => {
+      el.classList.remove('portfolio__devices-screenshot_active')
+    })
+  }
+
+  addActiveImageClass(element){
+    element.classList.add('portfolio__devices-screenshot_active')
   }
 }
