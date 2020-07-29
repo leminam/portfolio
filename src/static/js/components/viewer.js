@@ -100,7 +100,7 @@ export default class Viewer {
   handleClickImage(imageEl) {
     this.setViewImage(imageEl.src);
     this.removeActiveImageClass();
-    this.addActiveImageClass();
+    this.addActiveImageClass(imageEl);
   }
 
   removeActiveImageClass() {
@@ -108,7 +108,7 @@ export default class Viewer {
       el.classList.remove('portfolio__devices-screenshot_active')
     })
   }
-  
+
   addActiveImageClass(element){
     element.classList.add('portfolio__devices-screenshot_active')
   }
