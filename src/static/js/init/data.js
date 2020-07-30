@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         info_description: "Сайт музыканта с интересными фактами, композициями и биографией",
         devices_description: "Сайт музыканта с интересными фактами, композициями и биографией",        
         screenshot: "static/img/content/musician/john1-desk.png",
+        site:"https://leminam-musician.herokuapp.com/",
         images: [
           {
             type: 'desktop',
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         info_description: "Сайт-визитка агентства с фотографиями из профиля инстаграма",
         devices_description: "Сайт-визитка агентства с фотографиями из профиля инстаграма",   
         screenshot: "static/img/content/tamtam/tam5-desk.png",
+        site:"https://leminam-tam.herokuapp.com/",
         images: [
           {
             type: 'desktop',
@@ -72,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         info_description: "Сайт интернет-магазина брендовой одежды с карточкой товара",
         devices_description: "Сайт интернет-магазина брендовой одежды с карточкой товара",
         screenshot: "static/img/content/ave/ave1-desk.png",
+        site:"https://leminam-ave.herokuapp.com/",
         images: [
           {
             type: 'desktop',
